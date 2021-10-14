@@ -1,8 +1,9 @@
 import React from 'react';
 import {Container, Nav, NavDropdown, Navbar} from 'react-bootstrap';
+import AddApplication from '../AddApplication/addApplication';
 
 
-const Navigation = () => {
+const Navigation = ({getAllApplications}) => {
     return ( 
         <React.Fragment>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -12,7 +13,7 @@ const Navigation = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     <NavDropdown title="Applications" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Add Application</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.1">Add Application <AddApplication getAllApplications={getAllApplications}/></NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.2">Update Application</NavDropdown.Item>
                         <NavDropdown.Divider />

@@ -3,6 +3,7 @@ import './App.css';
 import Navigation from './Navbar/navbar';
 import axios from 'axios';
 import ApplicationTable from './ApplicationTable/applicationTable';
+import DeleteApplication from './DeleteApplication/deleteApplication';
 
 function App() {
   const [applications, setApplications] = useState([]);
@@ -15,13 +16,21 @@ function App() {
     }
   };
 
+  const deleteApplication = async (id) => {       
+    await axios
+      .delete(`https://localhost:44394/api/applications/${id}/`)
+      .then((response) => console.log(response));
+    getAllApplications();
+  };
+
   useEffect(() => {
   getAllApplications();
   }, []);
 
   return (
     <React.Fragment>
-      <Navigation />
+      <Navigation deleteApplication={deleteApplication}/>
+     {/* <DeleteApplication getAllApplications={getAllApplications} deleteApplication={deleteApplication}/> */}
       <ApplicationTable applications= {applications} />
     </React.Fragment>
   );
