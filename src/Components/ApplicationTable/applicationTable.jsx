@@ -1,40 +1,49 @@
-import React from 'react';
-import { Table }  from 'react-bootstrap';
+import React from "react";
+import { Table } from "react-bootstrap";
 
-const ApplicationTable = ({getAllApplications}) => {
-    return (
-<React.Fragment>
-<Table striped bordered hover>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td colSpan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</Table>
-</React.Fragment>
-      );
-}
- 
+const ApplicationTable = ({ applications }) => {
+  return (
+    <React.Fragment>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Link</th>
+            <th>Status</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          {applications.map(
+            ({
+              applicationsId,
+              dateTime,
+              jobTitle,
+              company,
+              link,
+              status,
+              comments,
+            }) => {
+              return (
+                <tr key={applicationsId}>
+                  <td>{applicationsId}</td>
+                  <td>{dateTime}</td>
+                  <td>{jobTitle}</td>
+                  <td>{company}</td>
+                  <td>{link}</td>
+                  <td>{status}</td>
+                  <td>{comments}</td>
+                </tr>
+              );
+            }
+          )}
+        </tbody>
+      </Table>
+    </React.Fragment>
+  );
+};
+
 export default ApplicationTable;

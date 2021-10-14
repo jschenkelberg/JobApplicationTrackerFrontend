@@ -5,7 +5,7 @@ import axios from 'axios';
 import ApplicationTable from './ApplicationTable/applicationTable';
 
 function App() {
-  const [applications, setApplications] = useState([ ]);
+  const [applications, setApplications] = useState([]);
 
   const getAllApplications = async () => {
     let res = await axios(`https://localhost:44394/api/applications`);
@@ -22,7 +22,7 @@ function App() {
   return (
     <React.Fragment>
       <Navigation />
-      <ApplicationTable />
+      <ApplicationTable applications= {applications} />
     </React.Fragment>
   );
 }
