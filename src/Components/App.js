@@ -7,6 +7,7 @@ import ApplicationTable from './ApplicationTable/applicationTable';
 import DeleteApplication from './DeleteApplication/deleteApplication';
 import jwtDecode from 'jwt-decode';
 import LoginForm from './Login/login';
+import Register from './Register/register';
 
 function App() {
   const [currentUser, setCurrentUser] = useState();
@@ -69,6 +70,7 @@ function App() {
         {!loading &&        
         <Switch>
            <Route path="/Login"  exact render={props => <LoginForm {...props}   setUserToken={setUserToken}  />} />
+           <Route path="/register" exact render={props => <Register {...props} />} />
            <Route path="/Table"  exact render={props => <ApplicationTable {...props} applications= {applications} />} />
         </Switch>
         }
