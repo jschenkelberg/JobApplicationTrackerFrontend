@@ -63,11 +63,10 @@ function App() {
     <React.Fragment>
       <Navigation deleteApplication={deleteApplication}/>
      {/* <DeleteApplication getAllApplications={getAllApplications} deleteApplication={deleteApplication}/> */}
-      <ApplicationTable applications= {applications} />
-      <Navigation />
+      {/* <ApplicationTable applications= {applications} /> */}
+    
       <Router>
-        {!loading &&
-        
+        {!loading &&        
         <Switch>
            <Route path="/Login"  exact render={props => <LoginForm {...props}   setUserToken={setUserToken}  />} />
            <Route path="/Table"  exact render={props => <ApplicationTable {...props} applications= {applications} />} />
