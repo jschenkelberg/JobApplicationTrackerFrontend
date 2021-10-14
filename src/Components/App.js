@@ -23,12 +23,7 @@ function App() {
     }
   };
 
-  const deleteApplication = async (id) => {       
-    await axios
-      .delete(`https://localhost:44394/api/applications/${id}/`)
-      .then((response) => console.log(response));
-    getAllApplications();
-  };
+
 
   useEffect(() => {
   const jwt = localStorage.getItem('token');
@@ -61,7 +56,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <Navigation deleteApplication={deleteApplication}/>
+      <Navigation />
      {/* <DeleteApplication getAllApplications={getAllApplications} deleteApplication={deleteApplication}/> */}
       {/* <ApplicationTable applications= {applications} /> */}
     

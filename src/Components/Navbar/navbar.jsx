@@ -1,9 +1,10 @@
 import React from 'react';
 import {Container, Nav, NavDropdown, Navbar} from 'react-bootstrap';
 import AddApplication from '../AddApplication/addApplication';
+import DeleteApplication from '../DeleteApplication/deleteApplication';
 
 
-const Navigation = ({getAllApplications}) => {
+const Navigation = ({getAllApplications, applications}) => {
     return ( 
         <React.Fragment>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -17,7 +18,7 @@ const Navigation = ({getAllApplications}) => {
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.2">Update Application</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.3">Delete Application</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Delete Application<DeleteApplication getAllApplications={getAllApplications} applications={applications} /></NavDropdown.Item>
 
                     </NavDropdown>
                     <NavDropdown title="Job Boards" id="collasible-nav-dropdown">
