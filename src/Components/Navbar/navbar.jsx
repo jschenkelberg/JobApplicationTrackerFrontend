@@ -12,11 +12,14 @@ const Navigation = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     <NavDropdown title="Applications" id="collasible-nav-dropdown">
+                        <NavDropdown.Item href="/ApplicationTable">View Application</NavDropdown.Item>
+                        <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.1">Add Application</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.2">Update Application</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.3">Delete Application</NavDropdown.Item>
+
                     </NavDropdown>
                     <NavDropdown title="Job Boards" id="collasible-nav-dropdown">
                         <NavDropdown.Item href="https://www.linkedin.com/jobs/" target="_blank">LinkedIn</NavDropdown.Item>
