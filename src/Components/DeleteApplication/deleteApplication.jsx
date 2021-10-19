@@ -48,7 +48,7 @@ const DeleteApplication = ({applications, getAllApplications}) => {
                 value={values.id}
               />
      
-              <Button className="greenbutton" type="submit" onClick={deleteApplication(values)}> Submit </Button>
+              <Button className="greenbutton" type="submit" onClick={handleSubmit}> Submit </Button>
               </div>
             </form> 
             </div>
