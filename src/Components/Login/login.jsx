@@ -51,7 +51,7 @@ const LoginForm = (props) => {
             <form onSubmit={handleSubmit}>
               <input name="username" placeholder="Username..." onChange={handleChange}></input>
               <br></br>
-              <input  name="password" placeholder="Password..." onChange={handleChange}></input>
+              <input  name="password" placeholder="Password..." onChange={handleChange} type="password"></input>
               <br></br>
               <div className="mb-2">
                 <Button style={{backgroundColor: "red", borderColor: "white"}} className="mt-2 mb-2" type="submit" >Login</Button> 

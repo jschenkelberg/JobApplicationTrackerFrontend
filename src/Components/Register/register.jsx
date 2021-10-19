@@ -49,7 +49,7 @@ const Register = () => {
                             <br></br>
                             <input  name="UserName" placeholder="Username..." onChange={handleChange}></input>
                             <br></br>
-                            <input  name="Password" placeholder="Password..." onChange={handleChange}></input>
+                            <input  name="Password" placeholder="Password..." onChange={handleChange} type="password" ></input>
                             <br></br>
                             <input  name="PhoneNumber" placeholder=" Phone Number(Optional)" onChange={handleChange}></input>
                             <br></br>
